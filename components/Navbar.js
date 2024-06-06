@@ -6,6 +6,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 export default function Navbar() {
   const { darkMode, toggleDarkMode } = useDarkMode();
@@ -16,17 +17,16 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex justify-between items-center">
         <div>
-          <button
-            className="text-white text-3xl font-bold"
-            onClick={toggleDarkMode}
-          >
-            Product Store
-          </button>
+          <Link href="/">
+            <button className="text-white text-3xl font-bold">
+              Product Store
+            </button>
+          </Link>
         </div>
         <div>
           <DropdownMenu>
             <DropdownMenuTrigger className="text-white font-semibold select-none">
-              Color Mode
+              Theme
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuSeparator />

@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
-import { useDarkMode } from "./DarkModeContext";
+import { useDarkMode } from "../DarkModeContext";
 import Link from "next/link";
 import Image from "next/image";
+import SearchBar from "@/components/SearchBar";
 
 export async function getServerSideProps() {
   const res = await fetch("https://fakestoreapi.com/products");
@@ -18,11 +19,20 @@ export async function getServerSideProps() {
 export default function ProductList({ products }) {
   const { darkMode } = useDarkMode();
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState("");
   const itemsPerPage = 8;
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = products.slice(indexOfFirstItem, indexOfLastItem);
+
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const currentItems = filteredProducts.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -32,6 +42,12 @@ export default function ProductList({ products }) {
         darkMode ? "text-white" : " text-gray-900"
       }`}
     >
+      <SearchBar
+        setCurrentPage={setCurrentPage}
+        setSearchQuery={setSearchQuery}
+        searchQuery={searchQuery}
+        darkMode={darkMode}
+      />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {currentItems.map((product) => (
           <div
@@ -53,7 +69,6 @@ export default function ProductList({ products }) {
             </div>
             <div className="flex-1 p-4 flex flex-col justify-between">
               <div>
-                {" "}
                 <h2 className="text-lg font-bold mb-2 truncate">
                   {product.title}
                 </h2>
@@ -92,7 +107,7 @@ export default function ProductList({ products }) {
         <nav aria-label="Pagination">
           <ul className="flex">
             {Array.from(
-              { length: Math.ceil(products.length / itemsPerPage) },
+              { length: Math.ceil(filteredProducts.length / itemsPerPage) },
               (_, i) => (
                 <li key={i}>
                   <button

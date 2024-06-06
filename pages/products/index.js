@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useDarkMode } from "../DarkModeContext";
+import { useDarkMode } from "../../components/DarkModeContext";
 import Link from "next/link";
 import Image from "next/image";
 import SearchBar from "@/components/SearchBar";

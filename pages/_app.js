@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { DarkModeProvider, useDarkMode } from "./DarkModeContext";
+import DarkModeProvider, { useDarkMode } from "../components/DarkModeContext";
 
 export default function App({ Component, pageProps }) {
   return (

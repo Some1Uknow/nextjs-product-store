@@ -1,4 +1,4 @@
-import { useDarkMode } from "@/pages/DarkModeContext";
+import { useDarkMode } from "./DarkModeContext";
 import {
   DropdownMenu,
   DropdownMenuItem,

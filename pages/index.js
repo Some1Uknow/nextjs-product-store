@@ -1,6 +1,6 @@
 import RightTriangleIcon from "@/components/Triangle";
 import { Button } from "@/components/ui/button";
-import { useDarkMode } from "@/pages/DarkModeContext";
+import { useDarkMode } from "@/components/DarkModeContext";
 import Image from "next/image";
 import Link from "next/link";
 

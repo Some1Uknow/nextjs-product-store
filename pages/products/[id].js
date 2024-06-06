@@ -39,13 +39,13 @@ export default function ProductDetail({ product }) {
               darkMode ? "bg-gray-700 text-white" : "bg-white"
             }`}
           >
-            <div className="md:w-4/5">
+            <div className="md:w-3/5">
               <Image
                 src={product.image}
                 alt={product.title}
                 width={500}
                 height={500}
-                className="object-cover mix-blend-normal"
+                className="object-cover"
               />
             </div>
             <div className="md:w-1/2 p-6">

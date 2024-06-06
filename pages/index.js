@@ -38,7 +38,7 @@ export default function ProductList({ products }) {
             key={product.id}
             className={`flex flex-col p-3 shadow-md ${
               darkMode
-                ? "bg-gray-800 text-white hover:shadow-white"
+                ? "bg-gray-600 text-white hover:shadow-white"
                 : "bg-white hover:shadow-gray-400"
             } rounded-md overflow-hidden`}
           >

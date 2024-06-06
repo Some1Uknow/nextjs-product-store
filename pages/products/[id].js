@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useDarkMode } from "../DarkModeContext";
+import { Button } from "@/components/ui/button";
 
 export async function getStaticPaths() {
   const res = await fetch("https://fakestoreapi.com/products");
@@ -30,10 +31,10 @@ export default function ProductDetail({ product }) {
   return (
     <div className="container h-full mx-auto p-4">
       <Link href="/" className="text-blue-500 underline mb-4">
-        Back
+        <Button variant="outline">Back</Button>
       </Link>
       <div className="flex items-center justify-center">
-        <div className="rounded-lg overflow-hidden shadow-lg max-w-6xl w-full md:max-w-4xl">
+        <div className="rounded-lg overflow-hidden shadow-lg max-w-8xl w-full md:max-w-4xl">
           <div
             className={`md:flex p-5 ${
               darkMode ? "bg-gray-700 text-white" : "bg-white"

@@ -21,7 +21,7 @@ export default function ProductList({ products }) {
       {products.map((product) => (
         <div
           key={product.id}
-          className={`flex border p-4 bg-white ${darkMode ? 'bg-gray-800 text-white' : 'bg-white'} rounded-md overflow-hidden mb-4`}
+          className={`flex shadow-md p-4 bg-white ${darkMode ? 'bg-gray-800 text-white hover:shadow-white' : 'bg-white hover:shadow-black'} rounded-md overflow-hidden mb-4`}
         >
           <div className="flex-shrink-0">
             <Image

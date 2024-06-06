@@ -1,6 +1,8 @@
 # Product Listings App
 
-### NOTE : Since NextJS 14 supports SSR and SSG functions only in Pages router, so Pages router is being used here instead of App router. App router does have SSR and SSG by default and we can implement it using async functions and fetch() method but this project is built using Pages router to show demonstration of getServerSideProps and getStaticPaths to implement SSR and SSG.
+## LIVE DEMO LINK - https://nextjs-somhako-submission.vercel.app/
+
+#### Note : Since NextJS 14 supports SSR and SSG functions only in Pages router, so Pages router is being used here instead of App router. App router does have SSR and SSG by default and we can implement it using async functions and fetch() method but this project is built using Pages router to show demonstration of getServerSideProps and getStaticPaths to implement SSR and SSG.
 
 ## Introduction
 
@@ -53,6 +55,10 @@ Follow these steps to set up and run the project locally:
    The app should now be running at [http://localhost:3000](http://localhost:3000).
 
 ## Usage
+
+### Pagination 
+
+Move through different pages with different items.
 
 ### Dark Mode
 

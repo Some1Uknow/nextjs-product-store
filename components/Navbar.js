@@ -1,5 +1,11 @@
 import { useDarkMode } from "@/pages/DarkModeContext";
-import { DropdownMenu, DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuItem,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
 
 export default function Navbar() {
   const { darkMode, toggleDarkMode } = useDarkMode();
@@ -19,12 +25,18 @@ export default function Navbar() {
         </div>
         <div>
           <DropdownMenu>
-            <DropdownMenuItem onClick={toggleDarkMode}>
-              Light ☀️
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={toggleDarkMode}>
-              Dark 🌑
-            </DropdownMenuItem>
+            <DropdownMenuTrigger className="text-white font-semibold select-none">
+              Color Mode
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem onClick={toggleDarkMode}>
+                Light ☀️
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={toggleDarkMode}>
+                Dark 🌑
+              </DropdownMenuItem>
+            </DropdownMenuContent>
           </DropdownMenu>
         </div>
       </div>

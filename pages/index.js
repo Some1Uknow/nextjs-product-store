@@ -1,3 +1,4 @@
+import { useDarkMode } from "./DarkModeContext";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -13,12 +14,14 @@ export async function getServerSideProps() {
 }
 
 export default function ProductList({ products }) {
+  const { darkMode } = useDarkMode();
+
   return (
-    <div className="max-w-6xl mx-auto p-4">
+    <div className={`max-w-6xl mx-auto p-4 ${darkMode ? 'bg-gray-800 text-white' : 'bg-white'}`}>
       {products.map((product) => (
         <div
           key={product.id}
-          className="flex border p-4 bg-white rounded-md overflow-hidden mb-4"
+          className={`flex border p-4 bg-white ${darkMode ? 'bg-gray-800 text-white' : 'bg-white'} rounded-md overflow-hidden mb-4`}
         >
           <div className="flex-shrink-0">
             <Image
@@ -36,10 +39,7 @@ export default function ProductList({ products }) {
               <span className="text-yellow-500">★★★★</span>
               <span className="text-gray-500 ml-2">310</span>
             </div>
-            <p className="text-gray-600 mb-4">
-              There are many variations of passages of Lorem Ipsum available,
-              but t...
-            </p>
+            <p className="text-gray-600 mb-4">{product.description}</p>
             <div className="flex">
               <Link
                 href={`/products/${product.id}`}

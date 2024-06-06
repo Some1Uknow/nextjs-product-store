@@ -1,5 +1,7 @@
 # Product Listings App
 
+### NOTE : Since NextJS 14 supports SSR and SSG functions only in Pages router, so Pages router is being used here instead of App router. App router does have SSR and SSG by default and we can implement it using async functions and fetch() method but this project is built using Pages router to show demonstration of getServerSideProps and getStaticPaths to implement SSR and SSG.
+
 ## Introduction
 
 Welcome to the Product Listings App! This application provides a clean and user-friendly interface for browsing and searching products fetched from the Fake Store API. The app supports dark and light modes and offers server-side rendering (SSR) and static site generation (SSG) for optimal performance.

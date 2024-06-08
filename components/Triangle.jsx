@@ -1,6 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const RightTriangleIcon = ({ size = 100, color = 'currentColor', className = '' }) => (
+const RightTriangleIcon = ({
+  size = 100,
+  color = "currentColor",
+  className = "",
+}) => (
   <svg
     width={size}
     height={size}

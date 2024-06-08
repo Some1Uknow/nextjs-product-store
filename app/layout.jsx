@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
 
 function AppContent({ children }) {
   return (
-    <div>
+    <div className="min-h-screen">
       <Navbar />
       {children}
     </div>

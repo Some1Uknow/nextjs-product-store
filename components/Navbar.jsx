@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useDarkMode } from "./DarkModeContext";
 import {
   DropdownMenu,
@@ -14,7 +14,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-blue-500 p-5 sticky top-0 z-10 ${darkMode ? "bg-blue-900" : ""}`}
+      className={`bg-blue-500 p-5 sticky top-0 z-10 ${
+        darkMode ? "bg-blue-900" : ""
+      }`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div>

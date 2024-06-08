@@ -12,6 +12,3 @@ export default async function ProductsPage() {
 
   return <ProductList products={products} />;
 }
-
-
-

@@ -9,7 +9,7 @@ export default function ProductDetail({ product }) {
 
   return (
     <div
-      className={`px-40 min-h-screen mx-auto p-4 ${
+      className={`px-40 mx-auto p-4 ${
         darkMode ? "text-white bg-black" : " text-gray-900"
       }`}
     >

@@ -1,15 +1,19 @@
-'use client'
+"use client";
 import RightTriangleIcon from "@/components/Triangle";
 import { Button } from "@/components/ui/button";
-import { useDarkMode } from "./client/DarkModeContext";
+import { useDarkMode } from "../components/DarkModeContext";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
   const { darkMode } = useDarkMode();
+  const router = useRouter();
 
   return (
-    <div className={`${darkMode ? "text-white" : "text-gray-900"} mt-28`}>
+    <div
+      className={`${darkMode ? "text-white bg-black" : "text-gray-900"} py-40`}
+    >
       <div className="max-w-6xl mx-auto p-4">
         <h1 className="text-6xl font-bold mb-4">Welcome to Product Store</h1>
         <p className="mb-8">Here are the features we've implemented:</p>
@@ -52,19 +56,19 @@ export default function HomePage() {
             Switch between dark and light themes.
           </li>
         </ul>
-        <Link href="/products">
-          <Button
-            className={`h-16 w-40 text-xl mt-10 ${
-              darkMode ? "bg-white text-black hover:bg-gray-400" : ""
-            }`}
-          >
-            Get Started{" "}
-            <RightTriangleIcon
-              size={50}
-              color={`${darkMode ? "black" : "white"}`}
-            />
-          </Button>
-        </Link>
+
+        <Button
+          onClick={() => router.push("/products")}
+          className={`h-16 w-40 text-xl mt-10 ${
+            darkMode ? "bg-white text-black hover:bg-gray-400" : ""
+          }`}
+        >
+          Get Started{" "}
+          <RightTriangleIcon
+            size={50}
+            color={`${darkMode ? "black" : "white"}`}
+          />
+        </Button>
       </div>
     </div>
   );

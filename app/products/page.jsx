@@ -1,8 +1,8 @@
-import ProductList from "../client/ProductList";
+import ProductList from "../../components/ProductList";
 
 export async function fetchProducts() {
   const res = await fetch("https://fakestoreapi.com/products", {
-    cache: "force-cache",
+    cache: "no-store", // SSR
   });
   return res.json();
 }

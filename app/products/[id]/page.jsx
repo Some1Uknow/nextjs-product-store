@@ -1,8 +1,8 @@
-import ProductDetail from "@/app/client/ProductDetail";
+import ProductDetail from "@/components/ProductDetail";
 
 async function fetchProduct(id) {
   const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
-    cache: "force-cache",
+    cache: "force-cache", //SSG
   });
   return res.json();
 }

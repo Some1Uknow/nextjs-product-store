@@ -1,14 +1,18 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useDarkMode } from "@/app/client/DarkModeContext";
+import { useDarkMode } from "./DarkModeContext";
 import { Button } from "@/components/ui/button";
 
 export default function ProductDetail({ product }) {
   const { darkMode } = useDarkMode();
 
   return (
-    <div className="container h-full mx-auto p-4">
+    <div
+      className={`px-40 min-h-screen mx-auto p-4 ${
+        darkMode ? "text-white bg-black" : " text-gray-900"
+      }`}
+    >
       <Link href="/products" className="text-blue-500 underline mb-4">
         <Button variant="outline">Back</Button>
       </Link>

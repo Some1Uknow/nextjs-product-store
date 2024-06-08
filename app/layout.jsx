@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { DarkModeProvider } from "./client/DarkModeContext";
+import { DarkModeProvider } from "../components/DarkModeContext";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
 
 function AppContent({ children }) {
   return (
-    <div className="min-h-screen">
+    <div>
       <Navbar />
       {children}
     </div>

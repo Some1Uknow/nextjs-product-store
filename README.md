@@ -2,8 +2,6 @@
 
 ## LIVE DEMO LINK - https://nextjs-somhako-submission.vercel.app/
 
-#### Note : Since NextJS 14 supports SSR and SSG functions only in Pages router, so Pages router is being used here instead of App router. App router does have SSR and SSG by default and we can implement it using async functions and fetch() method but this project is built using Pages router to show demonstration of getServerSideProps and getStaticPaths to implement SSR and SSG.
-
 ## Introduction
 
 Welcome to the Product Listings App! This application provides a clean and user-friendly interface for browsing and searching products fetched from the Fake Store API. The app supports dark and light modes and offers server-side rendering (SSR) and static site generation (SSG) for optimal performance.
@@ -11,7 +9,13 @@ Welcome to the Product Listings App! This application provides a clean and user-
 ## Features
 
 - **Server-Side Rendering (SSR)**: Ensures that the product listing pages are pre-rendered on the server for better performance and SEO.
+
+![image](https://github.com/Some1Uknow/nextjs-somhako-submission-app/assets/130275024/7db9679c-c13d-454d-a4c8-48db0fead3dd)
+
 - **Static Site Generation (SSG)**: Pre-renders product detail pages at build time for faster load times.
+
+![image](https://github.com/Some1Uknow/nextjs-somhako-submission-app/assets/130275024/25b68d62-74b4-4de1-b029-3ab4d5dfccb0)
+
 - **Responsive Design**: Optimized for all devices, including desktops, tablets, and mobile phones.
 - **Dark/Light Mode**: Toggle between dark and light themes for a personalized user experience.
 - **shadcn Components**: Utilizes shadcn UI components for a consistent and modern design.

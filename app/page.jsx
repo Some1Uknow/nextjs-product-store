@@ -1,6 +1,7 @@
+'use client'
 import RightTriangleIcon from "@/components/Triangle";
 import { Button } from "@/components/ui/button";
-import { useDarkMode } from "@/components/DarkModeContext";
+import { useDarkMode } from "./client/DarkModeContext";
 import Image from "next/image";
 import Link from "next/link";
 

@@ -1,4 +1,5 @@
-import { useDarkMode } from "./DarkModeContext";
+'use client'
+import { useDarkMode } from "../app/client/DarkModeContext";
 import {
   DropdownMenu,
   DropdownMenuItem,

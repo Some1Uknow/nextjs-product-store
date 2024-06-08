@@ -9,9 +9,11 @@ Welcome to the Product Listings App! This application provides a clean and user-
 ## Features
 
 - **Server-Side Rendering (SSR)**: Ensures that the product listing pages are pre-rendered on the server for better performance and SEO.
+
 ![image](https://github.com/Some1Uknow/nextjs-somhako-submission-app/assets/130275024/7db9679c-c13d-454d-a4c8-48db0fead3dd)
 
 - **Static Site Generation (SSG)**: Pre-renders product detail pages at build time for faster load times.
+
 ![image](https://github.com/Some1Uknow/nextjs-somhako-submission-app/assets/130275024/25b68d62-74b4-4de1-b029-3ab4d5dfccb0)
 
 - **Responsive Design**: Optimized for all devices, including desktops, tablets, and mobile phones.

@@ -26,7 +26,7 @@ export default function ProductList({ products }) {
 
   return (
     <div
-      className={`px-40 min-h-screen mx-auto p-4 ${
+      className={`px-40 min-h-screen max-sm:px-4 sm:px-10 md:px-14 mx-auto p-4 ${
         darkMode ? "text-white bg-black" : " text-gray-900"
       }`}
     >
